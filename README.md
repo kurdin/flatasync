@@ -8,14 +8,14 @@ Before: You must use try/catch in Javascript's `await` calls to handle errors fr
 
 ```js
 try {
-	const user = await ajaxAPICall('/users/1');
+  const user = await ajaxAPICall('/users/1');
   if(!user) return cb(null, 'User not found');
 } catch(e) {
   return cb(e, 'Unexpected error occurred');
 }
 // another call based on user's data
 try {
-	const post = await ajaxAPICall(`/posts/${user.postId}`);
+  const post = await ajaxAPICall(`/posts/${user.postId}`);
   if(!post) return cb(null, 'Post not found for user ${user.name}');
   else return return cb(null, post);
 } catch(e) {
