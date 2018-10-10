@@ -1,0 +1,31 @@
+{
+  "name": "flatasync",
+  "version": "0.1.0",
+  "description": "`flatAsync` a simple wrapper to use Async/Await call without try/catch blocks. ",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kurdin/flatasync.git"
+  },
+  "keywords": [
+    "async",
+    "await",
+    "flat",
+    "errors",
+    "try",
+    "catch",
+    "promises"
+  ],
+  "author": "Sergey Kurdin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kurdin/flatasync/issues"
+  },
+  "homepage": "https://github.com/kurdin/flatasync#readme"
+}
