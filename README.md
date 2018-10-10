@@ -4,7 +4,8 @@ Flat style pattern to handle errors.
 
 `npm i flatasync --save`
 
-Before: You must use try/catch in Javascript's `await` calls to handle errors from promise.
+### Before
+You must use try/catch in Javascript's `await` calls to handle errors from promise.
 
 ```js
 try {
@@ -23,21 +24,22 @@ try {
 }
 ```
 
-After: `flatAsync` wraps your await Promise or Method and returns errors/results in array `[err, results]`.
+### After
+`flatAsync` wraps your await Promise or Method and returns errors/results in array `[err, results]`.
 
 ```js
-	import flatAsync from 'flatAsync';
-	...
+import flatAsync from 'flatAsync';
+...
 
-	let user, post, err;
+let user, post, err;
 
-	[err, user] = await flatAsync(AjaxCall('/user/1'));
-  if(err || !user) return cb(err, 'User not found');
-	
-	[err, post] = await flatAsync(AjaxCall(`/posts/${user.postId}`));
-	if(err || !post) return cb(err, 'Post not found');
+[err, user] = await flatAsync(AjaxCall('/user/1'));
+if(err || !user) return cb(err, 'User not found');
 
-	return cb(null, post);
+[err, post] = await flatAsync(AjaxCall(`/posts/${user.postId}`));
+if(err || !post) return cb(err, 'Post not found');
+
+return cb(null, post);
 
 ```
 
