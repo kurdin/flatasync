@@ -13,7 +13,7 @@ Flat style pattern to handle errors.
 `const flatAsync = require('flatasync');`
 
 ## Example
-```
+```js
 import flatAsync from 'flatasync';
 
 const [err, response] = await flatAsync(AsyncCall(...));
