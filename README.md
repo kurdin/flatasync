@@ -1,5 +1,5 @@
 # flatAsync 
-`flatAsync` a simple wrapper to use Async/Await call without try/catch blocks. 
+`flatAsync` a simple wrapper to use Async/Await calls without try/catch blocks. 
 Flat style pattern to handle errors.
 
 `npm i flatasync --save`
