@@ -2,7 +2,26 @@
 `flatAsync` a simple wrapper to use Async/Await calls without try/catch blocks. 
 Flat style pattern to handle errors.
 
+## Install
 `npm i flatasync --save`
+
+## Use
+### ES6/7
+`import flatAsync from 'flatasync'`
+
+### NodeJs
+`const flatAsync = require('flatasync');`
+
+## Example
+```
+import flatAsync from 'flatasync'
+
+const [err, response] = await flatAsync(AsyncCall(...));
+if(err) return console.error(err);
+if (!response) return console.console('Not Found');
+
+// use response here
+```
 
 ### Before
 You must use try/catch in Javascript's `await` calls to handle errors from promise.
@@ -28,7 +47,7 @@ try {
 `flatAsync` wraps your await Promise or Method and returns errors/results in array `[err, results]`.
 
 ```js
-import flatAsync from 'flatAsync';
+import flatAsync from 'flatasync';
 ...
 
 let user, post, err;
