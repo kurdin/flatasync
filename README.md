@@ -14,10 +14,11 @@ Flat style pattern to handle errors.
 
 ## Example
 ```
-import flatAsync from 'flatasync'
+import flatAsync from 'flatasync';
 
 const [err, response] = await flatAsync(AsyncCall(...));
-if(err) return console.error(err);
+
+if (err) return console.error(err);
 if (!response) return console.console('Not Found');
 
 // use response here
