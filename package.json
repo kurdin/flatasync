@@ -1,6 +1,6 @@
 {
   "name": "flatasync",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "`flatAsync` a simple wrapper to use Async/Await call without try/catch blocks. ",
   "main": "lib/index.js",
   "directories": {
