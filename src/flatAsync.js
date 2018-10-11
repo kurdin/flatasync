@@ -4,7 +4,7 @@ const Fn = fn => {
   }
 
   var successFn = value => {
-    return [null, 'value'];
+    return [null, value];
   };
   var errorFn = err => {
     return [err];
