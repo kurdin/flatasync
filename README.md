@@ -30,14 +30,14 @@ You must use try/catch in Javascript's `await` calls to handle errors from promi
 ```js
 try {
   const user = await ajaxAPICall('/users/1');
-  if(!user) return cb(null, 'User not found');
+  if (!user) return cb(null, 'User not found');
 } catch(e) {
   return cb(e, 'Unexpected error occurred');
 }
 // another call based on user's data
 try {
   const post = await ajaxAPICall(`/posts/${user.postId}`);
-  if(!post) return cb(null, 'Post not found for user ${user.name}');
+  if (!post) return cb(null, 'Post not found for user ${user.name}');
   else return return cb(null, post);
 } catch(e) {
   return cb(e, 'Unexpected error occurred');
@@ -54,10 +54,10 @@ import flatAsync from 'flatasync';
 let user, post, err;
 
 [err, user] = await flatAsync(AjaxCall('/user/1'));
-if(err || !user) return cb(err, 'User not found');
+if (err || !user) return cb(err, 'User not found');
 
 [err, post] = await flatAsync(AjaxCall(`/posts/${user.postId}`));
-if(err || !post) return cb(err, 'Post not found');
+if (err || !post) return cb(err, 'Post not found');
 
 return cb(null, post);
 
